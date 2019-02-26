@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="seo-CT-RNj">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="vvg-dl-6cf">
+            <objects>
+                <viewController id="seo-CT-RNj" customClass="MainViewController" customModule="ProfileViewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jeq-Gs-2ys">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPm-Gz-2mj">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <connections>
+                                    <segue destination="3mg-ua-t39" kind="embed" id="vE2-y1-joA"/>
+                                </connections>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unknown.png" translatesAutoresizingMaskIntoConstraints="NO" id="tWt-CO-YhI">
+                                <rect key="frame" x="89" y="44" width="236" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="pSN-wn-MEb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dTu-m2-SEF" firstAttribute="bottom" secondItem="QPm-Gz-2mj" secondAttribute="bottom" id="0oU-2K-4UN"/>
+                            <constraint firstItem="dTu-m2-SEF" firstAttribute="trailing" secondItem="QPm-Gz-2mj" secondAttribute="trailing" id="19q-tM-3a1"/>
+                            <constraint firstItem="tWt-CO-YhI" firstAttribute="leading" secondItem="Jeq-Gs-2ys" secondAttribute="leadingMargin" constant="69" id="5QD-N5-hWI"/>
+                            <constraint firstItem="tWt-CO-YhI" firstAttribute="top" secondItem="dTu-m2-SEF" secondAttribute="top" constant="8" symbolic="YES" id="avF-x5-zz6"/>
+                            <constraint firstItem="QPm-Gz-2mj" firstAttribute="leading" secondItem="dTu-m2-SEF" secondAttribute="leading" id="qyc-2q-m5r"/>
+                            <constraint firstItem="QPm-Gz-2mj" firstAttribute="top" secondItem="tWt-CO-YhI" secondAttribute="bottom" constant="1" id="sUa-w3-VT5"/>
+                            <constraint firstItem="tWt-CO-YhI" firstAttribute="centerX" secondItem="QPm-Gz-2mj" secondAttribute="centerX" id="u8n-q5-KbH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dTu-m2-SEF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABE-eG-oWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1316" y="-173.16341829085459"/>
+        </scene>
+        <!--Top Apps Table View Controller-->
+        <scene sceneID="ZH4-Cm-Rrb">
+            <objects>
+                <tableViewController id="3mg-ua-t39" customClass="TopAppsTableViewController" customModule="ProfileViewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q5L-dN-F2R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="762"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="3mg-ua-t39" id="cs2-rm-4lG"/>
+                            <outlet property="delegate" destination="3mg-ua-t39" id="BjS-6M-KSZ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="viewModel" destination="HMv-X5-xxz" id="Nfz-tW-Teh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVU-ga-ziH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Internet connection appears to be offline. Please connect to internet and relaunch app." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Ub-qG-mPR">
+                    <rect key="frame" x="0.0" y="0.0" width="354" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="pVn-i5-IWo"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <customObject id="7kQ-Wi-bc9" customClass="APIClient" customModule="ProfileViewApp" customModuleProvider="target"/>
+                <customObject id="HMv-X5-xxz" customClass="ViewModel" customModule="ProfileViewApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="apiClient" destination="7kQ-Wi-bc9" id="Nrm-9P-OZ0"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-624.63768115942037" y="-211.60714285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Unknown.png" width="405" height="124"/>
+    </resources>
+</document>
